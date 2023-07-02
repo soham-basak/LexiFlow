@@ -1,4 +1,5 @@
 const express = require('express');
+const multer = require('multer');
 const app = express();
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
@@ -15,6 +16,20 @@ mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(console.log('connect')).catch((err) => console.log(err));
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'images');
+    },
+    filename: (req, file, cb) => {
+        cb(null, req.body.name);
+    }
+});
+
+const upload = multer({storage: storage});
+app.post ("/api/upload", upload.single("file"), (req, res) => {
+    res.status(200).json("File Uploaded");
+});
 
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
