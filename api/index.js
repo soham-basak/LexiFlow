@@ -17,6 +17,8 @@ mongoose.connect(process.env.MONGO_URL, {
     useUnifiedTopology: true
 }).then(console.log('connect')).catch((err) => console.log(err));
 
+
+// for image uploading
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'images');
