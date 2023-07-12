@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# Lexiflow
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Lexiflow is a full-stack blog web application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It provides a user-friendly interface for creating, updating, and deleting blog posts, as well as viewing posts created by other users. The application also incorporates an authentication system to ensure secure access to the platform.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- User Authentication: Users can sign up and log in to their accounts.
 
-### `npm start`
+- Create Post: Logged-in users can create new blog posts by providing a title, content, and optional image. Posts are stored in a MongoDB database.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Update Post: Users have the ability to edit and update their own posts, modifying the title, content, and image associated with each post.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- View Other Users' Posts: All users, whether logged in or not, can view blog posts created by other users.
 
-### `npm test`
+- Delete Post: Logged-in users can delete their own posts, removing them from the platform.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- User-Friendly UI: Lexiflow features a user-friendly and intuitive interface for a seamless browsing and blogging experience.
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run Lexiflow locally, you need to have the following installed on your machine:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js: [Download and Install Node.js](https://nodejs.org/en/download/)
+- MongoDB: [Download and Install MongoDB](https://www.mongodb.com/try/download/community)
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```shell
+   git clone https://github.com/VIRUS-XDD/LexiFlow.git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Navigate to the project client directory:   
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```shell
+      cd lexiflow
+      cd client 
 
-## Learn More
+3. Install the dependencies for the client:
+  
+    ```shell
+       npm i
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Navigate to the project api directory:   
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```shell
+      cd lexiflow
+      cd api
 
-### Code Splitting
+5. Install the dependencies for the api:
+  
+    ```shell
+       npm i
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+6. Create a .env file in the root directory of the project and provide the following environment variables:
+ 
+    ```shell
+       # Server configuration
+      PORT=5000
+      MONGODB_URI=<your-mongodb-uri>
 
-### Analyzing the Bundle Size
+### Client configuration
+REACT_APP_API_URL=http://localhost:5000/api
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+7. Start the server and the client concurrently:
 
-### Making a Progressive Web App
+   ```shell
+      npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+8. Access Lexiflow in your browser at http://localhost:3000.      
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Usage
 
-### Deployment
+- Register a new account or log in with your existing credentials.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- On the home page, you can view blog posts created by other users.
 
-### `npm run build` fails to minify
+- Click on the "New Post" button to create a new blog post.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Fill in the title and content fields and optionally upload an image for your post.
+
+- Click on the "Publish" button to create your post.
+
+- To edit or delete your own posts, navigate to the post and click on the "Edit" or "Delete" buttons respectively.
+
+## Technologies Used
+
+### Front-end:
+
+- React.js: JavaScript library for building user interfaces.
+
+- HTML and CSS: Markup and styling of the application.
+
+- Axios: Promise-based HTTP client for making API requests.
+
+### Back-end:
+
+- Node.js: JavaScript runtime environment for running server-side code.
+
+- Express.js: Web application framework for building RESTful APIs.
+
+- MongoDB: NoSQL database for storing blog post data.
+
+- Mongoose: Object Data Modeling (ODM) library for MongoDB.
+
+
+## Contributing
+
+Contributions to Lexiflow are always welcome. If you want to enhance existing features, add new features, or fix any issues, feel free to submit a pull request. However, before contributing, please make sure to follow the code of conduct.
