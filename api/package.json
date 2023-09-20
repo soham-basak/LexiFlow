@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
     "dcrypt": "^0.0.2",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
@@ -15,7 +16,8 @@
   "description": "lexiFlow REST API",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "author": "Dexter",
   "license": "ISC"

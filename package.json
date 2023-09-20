@@ -1,0 +1,11 @@
+{
+  "name": "lexiflow",
+  "version": "1.0.0",
+  "description": "Lexiflow is a full-stack blog web application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It provides a user-friendly interface for creating, updating, and deleting blog posts, as well as viewing posts created by other users. The application also incorporates an authentication system to ensure secure access to the platform.",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd api && npm start"
+  },
+  "author": "dexter",
+  "license": "ISC"
+}
